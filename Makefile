@@ -8,7 +8,8 @@ DEPS=System.Web.Http,System.Net.Http,System.Web.Mvc
 PKGS=dotnet
 LIB=sitePat.dll
 FLAGS=-out:$(TEMP_DIR)/$(LIB) -target:library -reference:$(DEPS) -pkg:$(PKGS)
-SRC=$(wildcard *.cs)
+SRC=$(filter-out App_Code/Global.asax.cs, $(wildcard **/*.cs))
+SUB_DIRS=Controllers
 
 define mkdir
 if [ ! -e $1 ] ; \
@@ -17,10 +18,15 @@ then \
 fi
 endef
 
-all: mkdir build install
+all: mkdir subdirs build install
+
+subdirs:
+	@for d in $(SUB_DIRS) ; do \
+		$(MAKE) -C $$d; \
+	done
 
 build:
-	@$(CC) $(SRC) $(FLAGS)
+	@$(CC) $(FLAGS) $(SRC)
 
 install:
 	@cp -rf $(TO_INSTALL) $(TEMP_DIR); \

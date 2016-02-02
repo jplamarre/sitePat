@@ -1,2 +1,2 @@
-﻿<%@ Application Inherits="SitePat.MvcApplication" Codebehing="Global.asax.cs" %>
+﻿<%@ Application Inherits="SitePat.MvcApplication" %>
 
