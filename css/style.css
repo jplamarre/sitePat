@@ -1,0 +1,32 @@
+
+header {
+    background-color: #FF0000;
+    width: 100%;
+}
+
+nav {
+    background-color: #00FF00;
+    width: 100%;
+}
+
+footer{
+    background-color: #0000FF;
+    width: 100%;
+}
+
+div.content {
+    background-color: #0FF000;
+}
+
+div.main {
+    margin: 0 15%;
+}
+
+div.clear {
+    clear: both;
+}
+
+.upper-outline {
+    border: 1px solid black;
+    border-style: solid hidden hidden hidden;
+}
