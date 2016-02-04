@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="/css/superfish.css"></link>
 </head>
 <body>
+    <div class="grad1">
     <div class="main">
     <header>
        <img src="/img/logo.jpg"></img>
@@ -29,6 +30,7 @@
     
 
     <nav>
+    <div class="menu">
     <ul class="sf-menu">
          <li>
             <a href="/Home/Index">#{menu1}</a>
@@ -66,6 +68,7 @@
             <a href="/Contact/Index">#{menu5}</a>
          </li>
     </ul>
+    </div>
     <div class="clear"></div>
     <a href="#" hreflang="fr-CA" onclick="localize(this)">fr</a>
     /
@@ -82,6 +85,7 @@
     <footer>
         <p class="upper-outline">Traduction Lutin Inc.</p>
     </footer>
+    </div>
     </div>
 <script type="text/javascript"> Cufon.now(); </script>
 </body>
