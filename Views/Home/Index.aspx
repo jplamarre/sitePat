@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %>
 <!DOCTYPE html>
-<html lang="en-US">
 <head>
     <meta charset="UTF-8">
 	<title>Traduction Lutin Inc.</title>
@@ -12,6 +11,11 @@
     <script src="/js/script.js"></script>
     <script src="/js/i18n.js"></script>
     <script src="/js/localization.js"></script>
+    <script src="/js/cufon-yui.js"></script>
+    <script src="/fonts/titillium-text.cufonfonts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Cufon.replace('h2');
+    </script> 
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
@@ -25,45 +29,53 @@
     
 
     <nav>
-    <ul class="sf-menu localizeChildren">
+    <ul class="sf-menu">
          <li>
-            <a href="#">#{menu1}</a>
-            <ul>
-                <li>
-                <a href="#">#{menu1a}</a>
-                </li>
-            </ul>
+            <a href="/Home/Index">#{menu1}</a>
          </li>
          <li>
-            <a href="#">#{menu2}</a>
-            <ul>
-                <li>
-                <a href="#">#{menu2a}</a>
-                </li>
-            </ul>
+            <a href="/Services/Index">#{menu2}</a>
          </li>
          <li>
-            <a href="#">#{menu3}</a>
+            <a href="/Expertise/Index">#{menu3}</a>
             <ul>
                 <li>
                 <a href="#">#{menu3a}</a>
                 </li>
-            </ul>
-         </li>
-         <li>
-            <a href="#">#{menu4}</a>
-            <ul>
                 <li>
-                <a href="#">#{menu4a}</a>
+                <a href="#">#{menu3b}</a>
+                </li>
+                <li>
+                <a href="#">#{menu3c}</a>
+                </li>
+                <li>
+                <a href="#">#{menu3d}</a>
+                </li>
+                <li>
+                <a href="#">#{menu3e}</a>
+                </li>
+                <li>
+                <a href="#">#{menu3f}</a>
                 </li>
             </ul>
          </li>
+         <li>
+            <a href="/WhoAmI/Index">#{menu4}</a>
+         </li>
+         <li>
+            <a href="/Contact/Index">#{menu5}</a>
+         </li>
     </ul>
+    <div class="clear"></div>
+    <a href="#" hreflang="fr-CA" onclick="localize(this)">fr</a>
+    /
+    <a href="#" hreflang="en-US" onclick="localize(this)">en</a>
     </nav>
     <div class="clear"></div>
     <div class="content">
 
     <h2>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h2>
+    <h1>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h1>
     
     </div>
 
@@ -71,10 +83,18 @@
         <p class="upper-outline">Traduction Lutin Inc.</p>
     </footer>
     </div>
+<script type="text/javascript"> Cufon.now(); </script>
 </body>
 <script>
+
 $('ul.sf-menu').superfish('init');
+
 $.fn.localization();
+
 $.fn.localize();
+
+function localize(obj){
+    $.fn.localize(obj.attributes["hreflang"].value);
+}
 </script>
 

@@ -1,4 +1,8 @@
 {
-    "#{menu1}": "menu1fr",
-    "#{menu1a}": "menu1afr"
+    "#{menu1}": "Accueil",
+    "#{menu2}": "Services",
+    "#{menu3}": "Expertise",
+    "#{menu3a}": "menu3afr",
+    "#{menu4}": "Qui suis-je?",
+    "#{menu5}": "Contact"
 }

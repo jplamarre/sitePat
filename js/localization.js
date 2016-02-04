@@ -1,11 +1,15 @@
 ;(function($,w) {
     var init = function () {
-        $("ul.localizeChildren").find("a").addClass($.fn.localization.default.classToLocalize);
+        var regex = new RegExp("^#{.*}$"); // expression here
+
+        $("*").filter(function () {
+                return regex.test($(this).text()); 
+        }).addClass($.fn.localization.default.classToLocalize).each(function (){$(this).attr("stringref", $(this).html())});
     },
 
     localizeString = function (htmlObj)
     {
-        htmlObj.innerHTML = htmlObj.innerHTML.toLocaleString();
+        htmlObj.innerHTML = htmlObj.attributes["stringref"].value.toLocaleString();
     },
 
     setLocale = function (_locale, _tagToLocalize)
@@ -25,6 +29,12 @@
     };
 
     $.fn.localize = function (_locale) {
+        if (_locale) {
+            localStorage.setItem("locale", _locale);
+        }
+        else {
+            _locale = localStorage.getItem("locale")
+        }
         setLocale(_locale, $.fn.localization.default.classToLocalize);
     };
 

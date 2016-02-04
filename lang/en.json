@@ -1,4 +1,13 @@
 {
-    "#{menu1}": "menu1en",
-    "#{menu1a}": "menu1aen"
+    "#{menu1}": "Home",
+    "#{menu2}": "Our Services",
+    "#{menu3}": "Expertise",
+    "#{menu3a}": "Juridique",
+    "#{menu3b}": "Politique",
+    "#{menu3c}": "Autres",
+    "#{menu3d}": "Pub",
+    "#{menu3e}": "Romans",
+    "#{menu3f}": "Contrats",
+    "#{menu4}": "Who am I?",
+    "#{menu5}": "Contact"
 }

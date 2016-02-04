@@ -1,4 +1,4 @@
-TO_INSTALL=lang/ img/ css/ js/ Views/ App_Code/ Global.asax
+TO_INSTALL=fonts/ lang/ img/ css/ js/ Views/ App_Code/ Global.asax
 TO_INSTALL+=$(shell find packages/ -name *.dll)
 INSTALL_DIR=public/
 TEMP_DIR=Temp

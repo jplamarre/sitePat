@@ -28,6 +28,8 @@
 		, XHR
 		, $to_locale_string = "toLocaleString"
 		, $to_lowercase = "toLowerCase"
+        , default_locale = "en-us"
+        , default_locale_json = "/lang/en.json"
 	
 	, array_index_of = Array.prototype.indexOf || function (item) {
 		var
@@ -184,6 +186,9 @@
 				}
 			}
 		}
+        var obj= new Object();
+        obj[default_locale] =  default_locale_json;
+        load(obj);
 	}
 	
 	String_ctr.prototype[$to_locale_string] = function () {
@@ -202,7 +207,9 @@
 			}
 			if (locale in localizations && this_val in localizations[locale]) {
 				return localizations[locale][this_val];
-			}
+			} else if (this_val in localizations[default_locale]) {
+                return localizations[default_locale][this_val];
+            }
 		}
 		while (i--);
 		
