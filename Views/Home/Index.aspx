@@ -8,7 +8,6 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="/js/superfish.js"></script>
-    <script src="/js/script.js"></script>
     <script src="/js/i18n.js"></script>
     <script src="/js/localization.js"></script>
     <script src="/js/cufon-yui.js"></script>
@@ -23,7 +22,15 @@
     <div class="grad1">
     <div class="main">
     <header>
+       <div style="display: inline;">
        <img src="/img/logo.jpg"></img>
+       </div>
+       <div style="display: inline;" >
+       <img class="minilogo" src="/img/fb_logo.png"></img>
+       <img class="minilogo" src="/img/tw_logo.png"></img>
+       <img class="minilogo" src="/img/phone_logo.png"></img>
+       <img class="minilogo" src="/img/email_logo.png"></img>
+       </div>
     </header>
     
 
@@ -31,13 +38,13 @@
     <div class="menu">
     <ul class="sf-menu">
          <li>
-            <a href="/Home/Index">#{menu1}</a>
+            <a href="#" content="home" onclick="loadContent(this)">#{menu1}</a>
          </li>
          <li>
-            <a href="/Services/Index">#{menu2}</a>
+            <a href="#" content="services" onclick="loadContent(this)">#{menu2}</a>
          </li>
          <li>
-            <a href="/Expertise/Index">#{menu3}</a>
+            <a href="#" content="expertise" onclick="loadContent(this)">#{menu3}</a>
             <ul>
                 <li>
                 <a href="#">#{menu3a}</a>
@@ -60,10 +67,10 @@
             </ul>
          </li>
          <li>
-            <a href="/WhoAmI/Index">#{menu4}</a>
+            <a href="#" content="whoami" onclick="loadContent(this)">#{menu4}</a>
          </li>
          <li>
-            <a href="/Contact/Index">#{menu5}</a>
+            <a href="#" content="contact" onclick="loadContent(this)">#{menu5}</a>
          </li>
     </ul>
     </div>
@@ -74,10 +81,19 @@
     </nav>
     <div class="clear"></div>
     <div class="content">
-
-    <h2>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h2>
-    <h1>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h1>
-    
+       <div id="floatingCirclesG">
+           <div class="f_circleG" id="frotateG_01"></div>
+           <div class="f_circleG" id="frotateG_02"></div>
+           <div class="f_circleG" id="frotateG_03"></div>
+           <div class="f_circleG" id="frotateG_04"></div>
+           <div class="f_circleG" id="frotateG_05"></div>
+           <div class="f_circleG" id="frotateG_06"></div>
+           <div class="f_circleG" id="frotateG_07"></div>
+           <div class="f_circleG" id="frotateG_08"></div>
+        </div>
+        <%= ViewData["Content"] %>
+        <h2>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h2>
+        <h1>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h1>
     </div>
 
     <footer>
@@ -87,16 +103,5 @@
     </div>
 <script type="text/javascript"> Cufon.now(); </script>
 </body>
-<script>
-
-$('ul.sf-menu').superfish('init');
-
-$.fn.localization();
-
-$.fn.localize();
-
-function localize(obj){
-    $.fn.localize(obj.attributes["hreflang"].value);
-}
-</script>
+<script src="/js/script.js"></script>
 

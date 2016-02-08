@@ -1,10 +1,10 @@
-TO_INSTALL=fonts/ lang/ img/ css/ js/ Views/ App_Code/ Global.asax
+TO_INSTALL=content/ fonts/ lang/ img/ css/ js/ Views/ App_Code/ Global.asax
 TO_INSTALL+=$(shell find packages/ -name *.dll)
 INSTALL_DIR=public/
 TEMP_DIR=Temp
 
 CC=mcs
-DEPS=System.Web.Http,System.Net.Http,System.Web.Mvc
+DEPS=System.Web.Http,System.Net.Http,System.Web.Mvc,./packages/Json.NET/Newtonsoft.Json.dll
 PKGS=dotnet
 LIB=sitePat.dll
 FLAGS=-out:$(TEMP_DIR)/$(LIB) -target:library -reference:$(DEPS) -pkg:$(PKGS)

@@ -16,8 +16,8 @@ namespace SitePat.Controllers
 
 			ViewData ["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
 			ViewData ["Runtime"] = isMono ? "Mono" : ".NET";
-
-			return View ();
+            ViewData ["Content"] = "<h1>Content Placeholder</h1>";
+			return View();
 		}
 	}
 }
