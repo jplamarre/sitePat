@@ -17,8 +17,6 @@
         Cufon.replace('h2');
     </script> 
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/superfish.css"></link>
 </head>
 <body>
