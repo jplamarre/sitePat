@@ -13,7 +13,7 @@
     <script src="/js/cufon-yui.js"></script>
     <script src="/fonts/titillium-text.cufonfonts.js" type="text/javascript"></script>
     <script type="text/javascript">
-        Cufon.replace('h2');
+        Cufon.replace('a');
     </script> 
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/superfish.css"></link>
@@ -22,15 +22,39 @@
     <div class="grad1">
     <div class="main">
     <header>
-       <div style="display: inline;">
+        <div class="logos">
+       <div class="logo">
+       <a href="#">
        <img src="/img/logo.jpg"></img>
-       </div>
-       <div style="display: inline;" >
+       </a>
+        </div>
+        <div class="minilogos">
+        <div class="minilogocontainer">
+       <a href="http://www.facebook.com/site">
        <img class="minilogo" src="/img/fb_logo.png"></img>
+       <p>facebook.com/site</p>
+       </a>
+        </div>
+        <div class="minilogocontainer">
+       <a href="http://www.twitter.com/site">
        <img class="minilogo" src="/img/tw_logo.png"></img>
+        <p>twitter.com/site</p>
+        </a>
+        </div>
+        <div class="minilogocontainer">
+        <a href="#">
        <img class="minilogo" src="/img/phone_logo.png"></img>
+        <p>418-555-5555</p>
+        </a>
+        </div>
+        <div class="minilogocontainer">
+        <a href="#">
        <img class="minilogo" src="/img/email_logo.png"></img>
-       </div>
+        <p>lutin@sadasd.com</p>
+        </a>
+        </div>
+        </div>
+        </div>
     </header>
     
 

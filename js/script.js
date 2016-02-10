@@ -3,6 +3,7 @@ $(document).ready(function() {
     $.fn.localization();
     $.fn.localize();
     loadContent();
+    Cufon.refresh();
 });
 
 function localize(obj){
@@ -26,13 +27,15 @@ function loadContent(obj){
 
     String.CurrentContent = toLoad;
 
-    $("div.content *").not("#floatingCirclesG").empty();
+    $("div.content").not("#floatingCirclesG").empty();
     $("#floatingCirclesG").fadeIn("fast");
     $.getJSON("/content/" + toLoad + "_" + String.locale.split("-")[0])
         .done(function(data){
             $.each(data, function(key,val)
             {
-                $("div.content").html(val);
+                newdiv = document.createElement("div");
+                $(newdiv).addClass("test").append(val);
+                $("div.content").append(newdiv);
             });
             console.log(data);
         })

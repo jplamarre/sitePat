@@ -35,56 +35,63 @@
 .sf-menu {
     float: left;
     margin-bottom: 1em;
-    box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+
 }
 .sf-menu ul {
-    box-shadow: 2px 2px 6px rgba(0,0,0,.2);
     min-width: 12em; /* allow long menu items to determine submenu width */
     *width: 12em; /* no auto sub width for IE7, see white-space comment below */
 }
 
 .sf-menu > li:first-child > a:first-child,
 .sf-menu li ul a{
-    border-left: 1px transparent;
+    /*border-left: 1px transparent;*/
 }
 
 .sf-menu a {
-    border-left: 1px solid #000;
     padding: .75em 1em;
     text-decoration: none;
     zoom: 1; /* IE7 */
+    margin: 0 3px;
 }
 
 .sf-menu li a{
-    background: white; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(white, grey); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(white, grey); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(white, grey); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(white, gray); /* Standard syntax (must be last) */    
+    background: grey;
+    border: 1px solid black;
+    border-radius: 5px;
+    /*background: grey; /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(white, grey); /* For Safari 5.1 to 6.0 */
+    /* background: -o-linear-gradient(white, grey); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(white, grey); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(white, gray); /* Standard syntax (must be last) */ 
 }
 
 .sf-menu a {
     color: #000;
 }
 .sf-menu li {
-    background: #BDD2FF;
+    background: transparent;
     white-space: nowrap; /* no need for Supersubs plugin */
     *white-space: normal; /* ...unless you support IE7 (let it wrap) */
     -webkit-transition: background .2s;
     transition: background .2s;
 }
 .sf-menu ul li {
-    background: #AABDE6;
+    /*background: rgba(0,0,0,0);*/
 }
 .sf-menu ul ul li {
-    background: #9AAEDB;
+    /* background: yellow;*/
 }
-.sf-menu li:hover,
-.sf-menu li.sfHover {
-    /*background: #CFDEFF;*/
+.sf-menu li a:hover,
+.sf-menu li a.sfHover {
+    /*color: orange;*/
+    background: orange;
     /* only transition out, not in */
-    -webkit-transition: none;
+    -webkit-transition: background .2s;
     text-decoration: underline;
+    box-shadow: 3px 3px 6px black;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 /*** arrows (for all except IE7) **/
@@ -124,5 +131,3 @@
 .sf-arrows ul .sfHover > .sf-with-ul:after {
     border-left-color: white;
 }
-
-

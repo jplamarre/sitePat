@@ -1,21 +1,23 @@
-
 header {
-    /*  background-color: #FF0000;*/
+    background-color: #FF0000;
     width: 100%;
 }
 
 nav {
-    /*background-color: #00FF00;*/
+    background-color: #00FF00;
     width: 100%;
 }
 
 footer{
-    /*  background-color: #0000FF;*/
+    background-color: #0000FF;
     width: 100%;
 }
 
 div.content {
-    /*    background-color: #0FF000;*/
+    background-color: #FFFF00;
+    border: 1px solid black;
+    border-style: hidden solid hidden solid;
+    margin: 0px 3%;
 }
 
 div.main {
@@ -41,8 +43,46 @@ div.clear {
 }
 
 .minilogo {
-   width: 35px;
-   height: 35px;
+    width: 35px;
+    height: 35px;
+}
+
+.logo {
+    float: left;
+}
+
+.minilogocontainer p{
+    height: 35px;
+    margin: 0px;
+    line-height: 35px;
+}
+
+.minilogocontainer a {
+    height: 35px;
+    width: 200px;
+}
+
+div.minilogocontainer {
+    display: block;
+    height: 35px;
+    width: 200px;
+    margin: 3px;
+}
+
+div.minilogos *{
+    float: left;
+}
+
+div.minilogos {
+    position: relative;
+    float:left;
+    width: 200px;
+    height: 200px;
+    top: 20px;
+    left: 20px;
+}
+div.logos {
+    float: left;
 }
 
 #floatingCirclesG{
@@ -219,4 +259,5 @@ div.clear {
     100%{
         background-color:rgb(255,255,255);
     }
+
 

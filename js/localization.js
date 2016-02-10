@@ -4,7 +4,7 @@
 
         $("*").filter(function () {
                 return regex.test($(this).text()); 
-        }).addClass($.fn.localization.default.classToLocalize).each(function (){$(this).attr("stringref", $(this).html())});
+        }).addClass($.fn.localization.default.classToLocalize).each(function (){$(this).attr("stringref", $(this).text())});
     },
 
     localizeString = function (htmlObj)
