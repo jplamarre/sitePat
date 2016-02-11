@@ -1,8 +1,3 @@
-header {
-    background-color: #FF0000;
-    width: 100%;
-}
-
 nav {
     background-color: #00FF00;
     width: 100%;
@@ -11,13 +6,25 @@ nav {
 footer{
     background-color: #0000FF;
     width: 100%;
+    float: left;
+}
+
+div.menu {
+    float: left;
 }
 
 div.content {
+    min-height: 100px;
     background-color: #FFFF00;
-    border: 1px solid black;
-    border-style: hidden solid hidden solid;
-    margin: 0px 3%;
+    width: 94%;
+    margin: 3%;
+    float: left;
+}
+
+div.content .test{
+    margin: 5px;
+    clear: both;
+    float: left;
 }
 
 div.main {
@@ -33,8 +40,13 @@ div.clear {
     border-style: solid hidden hidden hidden;
 }
 
+.side-outline {
+    border: 1px solid black;
+    border-style: hidden solid hidden solid;
+}
+
 .grad1 {
-    height: 1000px;
+    min-height: 1000px;
     background: white; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(white, grey); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, grey); /* For Opera 11.1 to 12.0 */
@@ -55,6 +67,12 @@ div.clear {
     height: 35px;
     margin: 0px;
     line-height: 35px;
+}
+
+.minilogocontainer a:hover{
+    text-shadow: 4px 4px 4px black;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
 }
 
 .minilogocontainer a {
@@ -81,7 +99,17 @@ div.minilogos {
     top: 20px;
     left: 20px;
 }
+
 div.logos {
+    float: left;
+}
+
+div.map {
+    height: 500px;
+    width: 500px;
+}
+
+div.test {
     float: left;
 }
 
@@ -259,5 +287,7 @@ div.logos {
     100%{
         background-color:rgb(255,255,255);
     }
+    i
+
 
 

@@ -13,7 +13,7 @@
     <script src="/js/cufon-yui.js"></script>
     <script src="/fonts/titillium-text.cufonfonts.js" type="text/javascript"></script>
     <script type="text/javascript">
-        Cufon.replace('a');
+        Cufon.replace('h2');
     </script> 
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/superfish.css"></link>
@@ -119,7 +119,6 @@
         <h2>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h2>
         <h1>Welcome to ASP.NET MVC <%: ViewData["Version"] %> on <%: ViewData["Runtime"] %>!</h1>
     </div>
-
     <footer>
         <p class="upper-outline">Traduction Lutin Inc.</p>
     </footer>
