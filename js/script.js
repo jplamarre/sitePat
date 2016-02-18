@@ -3,7 +3,6 @@ $(document).ready(function() {
     $.fn.localization();
     $.fn.localize();
     loadContent();
-    Cufon.refresh();
 });
 
 function localize(obj){
@@ -41,4 +40,12 @@ function loadContent(obj){
         })
         .fail(function(){console.log("b");})
         .always(function(){console.log("c");$("#floatingCirclesG").hide();});
+}
+
+function submit(){
+    console.log($("form").serializeArray());
+    $.post("/Questions/Post", $("form").serializeArray(), null, "json")
+        .done(function(data){console.log(data);})
+        .fail(function(data){console.log(data);})
+        .always(function(data){console.log(data);});
 }

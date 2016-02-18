@@ -51,13 +51,13 @@
     padding: .75em 1em;
     text-decoration: none;
     zoom: 1; /* IE7 */
-    margin: 0 3px;
+    /*    margin: 0 3px;*/
 }
 
 .sf-menu li a{
     background: grey;
     border: 1px solid black;
-    border-radius: 5px;
+    /* border-radius: 5px;*/
     /*background: grey; /* For browsers that do not support gradients */
     /*background: -webkit-linear-gradient(white, grey); /* For Safari 5.1 to 6.0 */
     /* background: -o-linear-gradient(white, grey); /* For Opera 11.1 to 12.0 */
@@ -74,6 +74,8 @@
     *white-space: normal; /* ...unless you support IE7 (let it wrap) */
     -webkit-transition: background .2s;
     transition: background .2s;
+    box-shadow: 4px 4px 4px black; 
+    
 }
 .sf-menu ul li {
     /*background: rgba(0,0,0,0);*/
@@ -84,13 +86,13 @@
 .sf-menu li a:hover,
 .sf-menu li a.sfHover {
     /*color: orange;*/
-    background: orange;
+    background: lightgrey;
     /* only transition out, not in */
     -webkit-transition: background .2s;
-    text-decoration: underline;
-    box-shadow: 3px 3px 6px black;
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
+    /*text-decoration: underline;
+     *     box-shadow: 3px 3px 6px black;
+     *         transition: all .2s ease-in-out;
+     *             transform: translate(0) scale(1.1);*/
     z-index: 1;
 }
 
@@ -131,3 +133,4 @@
 .sf-arrows ul .sfHover > .sf-with-ul:after {
     border-left-color: white;
 }
+

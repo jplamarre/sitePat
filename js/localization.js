@@ -33,7 +33,11 @@
             localStorage.setItem("locale", _locale);
         }
         else {
-            _locale = localStorage.getItem("locale")
+            _locale = localStorage.getItem("locale");
+            if (!_locale)
+            {
+                _locale = "en-US";
+            }
         }
         setLocale(_locale, $.fn.localization.default.classToLocalize);
     };
