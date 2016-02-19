@@ -11,20 +11,12 @@
     <script src="/js/superfish.js"></script>
     <script src="/js/i18n.js"></script>
     <script src="/js/localization.js"></script>
-    <script src="/js/stellar.js"></script>
-    <script>
-    $(function(){
-            $.stellar({
-            horizontalScrolling: false,
-            verticalOffset: 40
-            });
-            });
-    </script>
+    <script src="/js/stellar/jquery.stellar.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
     <link rel="stylesheet" type="text/css" href="/css/superfish.css"></link>
 </head>
 <body>
-    <div class="grad1">
+    <div class="grad1" data-stellar-background-ratio="0.25" >
     <div class="rightborder">
     </div>
     <div class="leftborder">
@@ -133,4 +125,10 @@
     </div>
 </body>
 <script src="/js/script.js"></script>
-
+<script>
+    $(function(){
+            $(".grad1").stellar({
+            horizontalScrolling: false
+            });
+            });
+</script>
